@@ -44,7 +44,9 @@ public class CodeJUnit5Test {
                 $("#user-content-3-using-junit5-extend-test-class").ancestor("h4")
                         .sibling(0).$("pre").getText();
 
-        assertEquals(sourceСode, actualCode, "JUnit5 source code is different");
+        assertEquals(sourceСode,
+                actualCode,
+                "JUnit5 source code is different");
 
     }
 
