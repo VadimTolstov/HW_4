@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class CodeJUnit5 {
+public class CodeJUnit5Test {
 
     @BeforeAll
     static void setUp() {
