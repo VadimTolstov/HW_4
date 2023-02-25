@@ -13,8 +13,9 @@ public class CodeJUnit5 {
 
     @BeforeAll
     static void setUp() {
+        Configuration.browser = "firefox";
         Configuration.browserSize = "1920x1080";
-        // Configuration.holdBrowserOpen = true;
+        //  Configuration.holdBrowserOpen = true;
         Configuration.baseUrl = "https://github.com";
     }
 
@@ -43,10 +44,7 @@ public class CodeJUnit5 {
                 $("#user-content-3-using-junit5-extend-test-class").ancestor("h4")
                         .sibling(0).$("pre").getText();
 
-        assertEquals(
-                sourceСode,
-                actualCode,
-                "JUnit5 source code is different");
+        assertEquals(sourceСode, actualCode, "JUnit5 source code is different");
 
     }
 
