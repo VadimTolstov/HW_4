@@ -13,9 +13,9 @@ public class CodeJUnit5 {
 
     @BeforeAll
     static void setUp() {
-        Configuration.browser = "firefox";
+//        Configuration.browser = "firefox";
         Configuration.browserSize = "1920x1080";
-        //  Configuration.holdBrowserOpen = true;
+//          Configuration.holdBrowserOpen = true;
         Configuration.baseUrl = "https://github.com";
     }
 
