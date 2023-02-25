@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class CodeJUnit5Test {
+public class TestAssertions {
 
     @BeforeAll
     static void setUp() {
@@ -19,7 +19,7 @@ public class CodeJUnit5Test {
         Configuration.baseUrl = "https://github.com";
     }
 
-    String sourceСode = """
+    String expectedCode = """
             @ExtendWith({SoftAssertsExtension.class})
             class Tests {
               @Test
@@ -33,7 +33,7 @@ public class CodeJUnit5Test {
             }""";
 
     @Test
-    void codeDisplayJUnit5() {
+    void pagesSoftAssertions() {
         open("/selenide/selenide");
         $("a#wiki-tab").click();
         $("#wiki-pages-filter").setValue("SoftAssertions");
@@ -44,7 +44,7 @@ public class CodeJUnit5Test {
                 $("#user-content-3-using-junit5-extend-test-class").ancestor("h4")
                         .sibling(0).$("pre").getText();
 
-        assertEquals(sourceСode,
+        assertEquals(expectedCode,
                 actualCode,
                 "JUnit5 source code is different");
 
