@@ -15,7 +15,7 @@ public class TestAssertions {
     static void setUp() {
 //        Configuration.browser = "firefox";
         Configuration.browserSize = "1920x1080";
-//          Configuration.holdBrowserOpen = true;
+          Configuration.holdBrowserOpen = true;
         Configuration.baseUrl = "https://github.com";
     }
 
